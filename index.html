@@ -16,8 +16,8 @@
 
 </head>
 
-<body>
-  <h1 class="my-4 text-center">Buttons</h1>
+<body id="ui-guide">
+  <h1 class="text-center">Buttons</h1>
   <div class="tb-grid tb-grid-gap-30">
     <div class="tb-grid-md-4"></div>
     <div class="tb-grid-md-4">
@@ -79,7 +79,7 @@
   <div class="m-auto w-50">
 
   </div>
-  <h1 class="my-4 text-center">Inputs</h1>
+  <h1 class="text-center">Inputs</h1>
   
   <div class="tb-grid tb-grid-gap-30">
     <div class="tb-grid-md-4"></div>
@@ -121,24 +121,24 @@
     </div>
   </div>
 
-  <h1 class="my-4 text-center">Search</h1>
+  <h1 class="text-center">Search</h1>
   <div class="tb-grid tb-grid-gap-30">
     <div class="tb-grid-md-4"></div>
     <div class="tb-grid-md-4">
       <div class="form-group has-search mb-5">
-        <input type="search" class="form-control border-0" placeholder="Search">
+        <input type="search" class="form-control" placeholder="Search">
         <span class="input-icon left">
           <img src="assets/icons/search.png" alt="search">
         </span>
       </div>
       <div class="form-group has-search mb-5">
-        <input type="search" class="form-control border-0" placeholder="Search">
+        <input type="search" class="form-control" placeholder="Search">
         <span class="input-icon right">
           <img src="assets/icons/search.png" alt="search">
         </span>
       </div>
       <div class="form-group has-search mb-5">
-        <input type="search" class="form-control border-0 bg-white" placeholder="Search">
+        <input type="search" class="form-control bg-white" placeholder="Search">
         <span class="input-icon left">
           <img src="assets/icons/search.png" alt="search">
         </span>
@@ -146,11 +146,11 @@
     </div>
 
   </div>
-  <h1 class="my-4 text-center">Checkbox</h1>
+  <h1 class="text-center">Checkbox</h1>
   <div class="tb-grid tb-grid-gap-30">
     <div class="tb-grid-md-4"></div>
     <div class="tb-grid-md-4">
-      <label class="customcheck dark">
+      <label class="customcheck dark check-outline">
         <input type="checkbox" checked="checked">
         <span class="checkmark"></span>
       </label>
@@ -162,13 +162,174 @@
         <input type="checkbox" checked="checked">
         <span class="checkmark"></span>
       </label>
-      <label class="customcheck danger">
+      <label class="customcheck danger check-outline">
         <input type="checkbox" checked="checked">
         <span class="checkmark"></span>
-      </label>      
+      </label>   
+      <br><br>  
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+      
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider"></span>
+      </label> 
     </div>
   </div>
-  </ul>
+
+  <h1 class="text-center">Inputs Force state</h1>
+  
+  <div class="tb-grid tb-grid-gap-30">
+    <div class="tb-grid-md-4"></div>
+    <div class="tb-grid-md-4">
+      <div class="input-group mb-5">
+        <input type="text" class="form-control" placeholder="First Name" aria-label="Username"
+          aria-describedby="basic-addon1">
+        <span class="placeholder">First Name</span>
+        <span class="input-icon right">
+          <img src="assets/icons/user.png" alt="user">
+        </span>
+      </div>
+      <h2>focused</h2>
+      <div class="input-group mb-5">
+        <input type="text" class="form-control focused" placeholder="First Name" aria-label="Username"
+          aria-describedby="basic-addon1">
+        <span class="placeholder">First Name</span>
+        <span class="input-icon right">
+          <img src="assets/icons/user.png" alt="user">
+        </span>
+      </div>
+      <h2>focused (key tab)</h2>
+      <div class="input-group mb-5">
+        <input type="text" class="form-control focused" placeholder="First Name" aria-label="Username"
+          aria-describedby="basic-addon1">
+        <span class="placeholder">First Name</span>
+        <span class="input-icon right">
+          <img src="assets/icons/user.png" alt="user">
+        </span>
+      </div>
+      <h2>Hover (mouse over)</h2>
+      <div class="input-group mb-5">
+        <input type="text" class="form-control hover" placeholder="First Name" aria-label="Username"
+          aria-describedby="basic-addon1">
+        <span class="placeholder">First Name</span>
+        <span class="input-icon right">
+          <img src="assets/icons/user.png" alt="user">
+        </span>
+      </div>
+      <h2>Activated</h2>
+      <div class="input-group is-validated mb-5">
+        <input type="text" class="form-control is-valid-dark" placeholder="First Name" value="First Name" aria-label="Username" aria-describedby="basic-addon1">
+        <span class="placeholder">First Name</span>
+        <span class="input-icon right">
+          <img src="assets/icons/user.png" alt="user">
+        </span>
+      </div>
+      <h2>Disabled</h2>
+      <div class="input-group mb-5">
+        <input type="text" class="form-control" placeholder="First Name" aria-label="Username"
+          aria-describedby="basic-addon1" disabled>
+        <span class="placeholder">First Name</span>
+        <span class="input-icon right">
+          <img src="assets/icons/user.png" alt="user">
+        </span>
+      </div>
+      <h2>invalid</h2>
+      <div class="input-group mb-5">
+        <input type="text" class="form-control is-invalid" placeholder="First Name" value="First Name" aria-label="Username" aria-describedby="basic-addon1">
+        <span class="placeholder">First Name</span>
+        <span class="input-icon right">
+          <img src="assets/icons/close.png" alt="close">
+        </span>
+      </div>
+      <h2>Validated</h2>
+      <div class="input-group mb-5">
+        <input type="text" class="form-control is-valid" placeholder="First Name" value="First Name" aria-label="Username" aria-describedby="basic-addon1">
+        <span class="placeholder">First Name</span>
+        <span class="input-icon right">
+          <img src="assets/icons/checked-primary.png" alt="checked">
+        </span>
+      </div>
+      <div style="background-color: #F0F2F3;padding: 20px;border-radius: 8px;">
+        <h2>inactive</h2>
+        <div class="form-group has-search mb-5">
+          <input type="search" class="form-control bg-white" placeholder="Search Transactions">
+          <span class="input-icon left">
+            <img src="assets/icons/search.png" alt="search">
+          </span>
+        </div>
+        <h2>focused</h2>
+        <div class="form-group has-search mb-5">
+          <input type="search" class="form-control bg-white focused" placeholder="Your search term here">
+          <span class="input-icon left">
+            <img src="assets/icons/search.png" alt="search">
+          </span>
+        </div>
+        <h2>focused (key tab)</h2>
+        <div class="form-group has-search mb-5">
+          <input type="search" class="form-control bg-white focused" placeholder="Your search term here">
+          <span class="input-icon left">
+            <img src="assets/icons/search.png" alt="search">
+          </span>
+        </div>
+        <h2>hoverd</h2>
+        <div class="form-group has-search mb-5">
+          <input type="search" class="form-control bg-white hoverd" placeholder="Your search term here">
+          <span class="input-icon left">
+            <img src="assets/icons/search.png" alt="search">
+          </span>
+        </div>
+        <h2>activated</h2>
+        <div class="form-group has-search mb-5">
+          <input type="search" class="form-control bg-white hoverd" placeholder="Your search term here">
+          <span class="input-icon left">
+            <img src="assets/icons/search.png" alt="search">
+          </span>
+          <span class="input-icon right">
+            <img src="assets/icons/right-success-lg.png" alt="right-success-lg">
+          </span>
+        </div>
+        <h2>COMPLETED</h2>
+        <div class="form-group has-search mb-5">
+          <input type="search" class="form-control bg-white" placeholder="Your search term here">
+          <span class="input-icon left">
+            <img src="assets/icons/search.png" alt="search">
+          </span>
+          <span class="input-icon right">
+            <img src="assets/icons/close-lg.png" alt="close-lg">
+          </span>
+        </div>  
+      </div>
+      <h2 style="margin: 20px 0;">O1. Notifications</h2>   
+      <div class="notification-container notify-danger">
+        <div class="dismiss">
+          <img src="assets/icons/dismiss.png" alt="dismess">
+        </div>
+        <h3>Account Updated</h3>
+        <p>Account updated detail</p>
+        <p class="text-danger">Account updated detail</p>
+      </div>
+      <div class="notification-container notify-secondary">
+        <div class="dismiss">
+          <img src="assets/icons/dismiss.png" alt="dismess">
+        </div>
+        <h3>Account Updated</h3>
+        <p>Account updated detail</p>
+        <p class="text-secondary">Account updated detail</p>
+      </div>
+      <div class="notification-container notify-primary">
+        <div class="dismiss">
+          <img src="assets/icons/dismiss.png" alt="dismess">
+        </div>
+        <h3>Account Updated</h3>
+        <p>Account updated detail</p>
+        <p class="text-primary">Account updated detail</p>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>
