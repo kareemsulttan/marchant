@@ -15,6 +15,7 @@
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6F818B;
+  --black: #000;
   --primary: #00B07D;
   --secondary: #00A1B8;
   --success: #66D87F;
@@ -31,7 +32,9 @@
 *::after {
   box-sizing: border-box;
 }
-
+html,body,main {
+  height: 100%;
+}
 body {
   margin: 0;
   font-family: 'DM Sans', sans-serif;
@@ -40,12 +43,11 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: var(--white);
-  height: 8000px;
+  background-color: #F2F2F2;
 }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
@@ -53,7 +55,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 1.875rem;
+  font-size: 2.125rem;
+  font-weight: 700;
 }
 
 h2, .h2 {
@@ -128,7 +131,13 @@ h6, .h6 {
 .flex-center-v-start-h {
   justify-content: start!important;
 }
-.mr10 {margin-right: 10px;}
+.flex-between {
+  justify-content: space-between;
+}
+/*spaces*/
+.mr10 {margin-right: 10px!important;}
+.no-mb {margin-bottom: 0!important;}
+/*text*/
 .text-left {
   text-align: left !important;
 }
@@ -188,6 +197,8 @@ a.text-warning:hover, a.text-warning:focus {
 }
 .bg-white {background-color: var(--white)!important;}
 .bg-transparent {background-color: transparent!important;}
+/*height*/
+.fh {height: 100%;}
 /*Buttons*/
 
 .btn {
@@ -206,6 +217,10 @@ a.text-warning:hover, a.text-warning:focus {
   line-height: 1.5;
   border-radius: 0;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-block {
+  display: block;
+  width: 100%;
 }
 .btn-icon {
   padding-left: 0;
@@ -545,9 +560,9 @@ img {
   font-size: .875rem;
   font-weight: bold;
   color: var(--dark);
-  background-color: #F0F2F3;
+  background-color: #F9FAFB;
   background-clip: padding-box;
-  border: 1px solid #F0F2F3;
+  border: 1px solid #F9FAFB;
   border-bottom-color: #000;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   max-height: 46px;
@@ -687,6 +702,11 @@ select.form-control:focus::-ms-value {
   right: 1.5rem;
   left: initial;
 }
+.input-icon.bottom-right {
+  right: 1.5rem;
+  left: initial;
+  top: 4rem;
+}
 .input-icon.left {
   left: 1.5rem;
   right: initial;
@@ -807,7 +827,6 @@ select.form-control:focus::-ms-value {
   background-image: url(../assets/icons/checked-white.png);
 }
 
-.btn {margin: .5rem;}
 .input-group,.form-group.has-search {margin-bottom: 2rem;}
 
 
@@ -1011,38 +1030,55 @@ input:checked + .slider:before {
   width: 100%;
   margin-bottom: 18px;
 }
+/*side nav*/
 .side-nav {
-  max-width: 175px;
   background-color: var(--white);
+  height: 100%;
+  position: relative;
 }
-.side-nav nav .brand {
+.side-nav .nav-header {
   padding: 40px;
 }
-.side-nav nav .nav-title,.side-nav nav .nav-list,.side-nav nav .nav-footer  {
+.side-nav .nav-item,.side-nav .nav-footer  {
   padding: 40px 30px;
 }
-.side-nav nav .brand,.side-nav nav .nav-title,.side-nav nav .nav-list {
+.side-nav .nav-header,.side-nav .nav-item {
   border-bottom: 1px solid #9F9F9F;
 }
-.side-nav nav .nav-title h2 {
+.side-nav .nav-item {
+  cursor: pointer;
+}
+.side-nav .nav-item h2 {
   color: #6C6C6C;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
 }
-.side-nav nav .nav-list h1 {
-  font-size: 18px;
+.side-nav .nav-item .nav-list-container {
+  overflow: hidden;
+  max-height: 0;
+  padding-left: 3px;
+  -webkit-transition: max-height 0.3s ease-out, padding-top 0.6s ease 0.1s;
+  -moz-transition: max-height 0.3s ease-out, padding-top 0.6s ease 0.1s;
+  -o-transition: max-height 0.3s ease-out, padding-top 0.6s ease 0.1s;
+  transition: max-height 0.3s ease-out, padding-top 0.6s ease 0.1s;
+}
+.side-nav .nav-item.active h2 {
   font-weight: 700;
   color: var(--dark);
 }
-.side-nav nav .nav-list ul li {
-  padding-left: 25px;
-  margin-bottom: 10px;
-  position: relative;
+.side-nav .nav-item.active .nav-list-container {
+  max-height: 200px;
+  padding-top: 25px;
+  -webkit-transition: max-height 0.3s ease-out, padding-top 0.5s ease 0.1s;
+  -moz-transition: max-height 0.3s ease-out, padding-top 0.5s ease 0.1s;
+  -o-transition: max-height 0.3s ease-out, padding-top 0.5s ease 0.1s;
+  transition: max-height 0.3s ease-out, padding-top 0.5s ease 0.1s;
 }
-.side-nav nav .nav-list ul {
+.side-nav ul.nav-list {
   position: relative;
+  margin: 0;
 }
-.side-nav nav .nav-list ul::before {
+.side-nav ul.nav-list::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1052,16 +1088,21 @@ input:checked + .slider:before {
   height: 100%;
   background-color: #9F9F9F;
 }
-.side-nav nav .nav-list ul li:last-child {
+.side-nav ul.nav-list li {
+  padding-left: 25px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.side-nav ul.nav-list li:last-child {
   padding-bottom: 0;
 }
-.side-nav nav .nav-list ul li a {
+.side-nav ul.nav-list li a {
   font-size: 14px;
   font-weight: 400;
   color: #6C6C6C;
   text-decoration: none;
 }
-.side-nav nav .nav-list ul li.active::before {
+.side-nav ul.nav-list li.active::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1071,9 +1112,22 @@ input:checked + .slider:before {
   height: 100%;
   background-color: var(--primary);
 }
-.side-nav nav .nav-list ul li.active a {
+.side-nav ul.nav-list li.active a {
   color: var(--dark);
 }
+.side-nav .nav-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.content {
+  padding-right: 40px;
+}
+.content-header {
+  padding: 35px 0;
+}
+/*table*/
 table {text-align: left;}
 table,table thead,table tbody {
   display: block;
@@ -1084,6 +1138,7 @@ table thead {
 table thead tr,table tbody tr {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5px 20px;
   border-bottom: 1px solid #000000;
 }
@@ -1127,3 +1182,83 @@ table tbody tr td.amount {
   color: #000;
   font-weight: 700;
 }
+
+/* ============================================ *
+ * login-page
+ * ============================================ */
+
+.sm-text {display: none;}
+.login-page header nav {
+  background-color: var(--white);
+  padding: 22px 15px;
+}
+.login-page header nav .brand > img {width: 100%;}
+.login-page main {
+  height: calc(100% - 88px); 
+  padding: 0 32px;
+}
+.login-page .login-container {
+  max-width: 457px;
+  background-color: var(--white);
+  flex: auto;
+  padding: 35px 45px;
+}
+.login-page .section-title {padding-bottom: 65px;}
+.login-page .section-title h1 {color: var(--black);}
+.login-page .login-details .input-group:first-child {margin-bottom: 57px;}
+.login-page .login-details .input-group:nth-child(2) {margin-bottom: 48px;}
+.login-page .a-dark {
+  font-size: .75rem;
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: none;
+} 
+a.a-dark:hover {text-decoration: underline;}
+.login-page .login-details .btn {
+  padding: 1rem 1.5rem;
+  margin-bottom: 87px;
+}
+.input-group .sm-text a {color: #6C6C6C;}
+
+/* ============================================ *
+ * users-page
+ * ============================================ */
+ .users-table {padding-bottom: 40px;}
+ .users-table tbody tr {background-color: var(--white);}
+ .users-table .ids {width: 210px;}
+ .users-table .date {width: 200px;}
+ .users-table .time {width: 150px;}
+ .users-table .user {width: 175px;}
+ .users-table .amount {
+  width: 255px;
+  text-align: right;
+}
+.users-table .amount .btn {
+  padding: 3px 19px;
+}
+.users-table .amount .btn.btn-danger {
+  margin-left: 20px;
+}
+
+/* ============================================ *
+ * responsive
+ * ============================================ */
+ @media(max-width:1130px) {
+ }
+ @media(max-width:480px) {
+  h1, .h1 {font-size: 1.75rem;}
+  .sm-text {display: block;}
+  .lg-text {display: none;}
+  .login-page main {height: calc(100% - 70px);}
+  .login-page header nav .brand > img {max-width: 200px;}
+  .login-page .login-details .input-group:nth-child(2) {margin-bottom: 78px;}
+  .login-page .login-container {padding: 35px 32px;}
+  .login-page .input-group .bottom-right {right: 0;}
+  .login-page .login-details .btn {margin-bottom: 30px;}
+ }
+ @media(max-width:370px) {
+  .login-page main,.login-page .login-container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+ }
