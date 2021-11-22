@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth</title>
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- STYLE CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- BODY -->
+
+<body class="users user-settings">
+  <!-- The Modal -->
+  <div id="modal" class="modal-container flex-center-vh">
+
+    <!-- Modal content -->
+    <div class="modal">
+      <div class="dismiss flex-center-vh">
+        <img src="assets/icons/dismiss.png" alt="">
+      </div>
+      <div class="modal-header">
+        <h2>Confirm password</h2>
+        <p>For security purposes, please confirm your password to <br /> change your email</p>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <input type="password" class="form-control" placeholder="Enter current password" aria-label="Username" aria-describedby="basic-addon1">
+          <span class="placeholder">Enter current password</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary">Change email address</button>
+      </div>
+    </div>
+  </div>
+  <!-- MAIN -->
+  <main>
+    <div class="tb-grid tb-grid-gap-40 fh">
+      <div class="tb-grid-md-2 tb-grid-sm-4">
+        <nav class="side-nav">
+          <div class="nav-header brand flex-center-vh">
+            <img src="assets/icons/nav-logo.png" alt="nav-logo">
+          </div>
+          <div class="nav-body">
+            <div class="nav-item">
+              <h2>Organization</h2>
+            </div>
+            <div class="nav-item active">
+              <h2>Reporting</h2>
+              <div class="nav-list-container">
+                <ul class="list-unstyled nav-list">
+                  <li class="active"><a href="#">Transactions</a></li>
+                  <li><a href="#">Batches</a></li>
+                  <li><a href="#">Deposits</a></li>
+                  <li><a href="#">Scheduled</a></li>
+                  <li><a href="#">Analytics</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav-item">
+              <h2>Profiles</h2>
+              <div class="nav-list-container">
+                <ul class="list-unstyled nav-list">
+                  <li><a href="#">Users</a></li>
+                  <li><a href="#">Members</a></li>
+                  <li><a href="#">Roles</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="nav-footer flex-center-vh">
+            <img src="assets/icons/user-outline.png" alt="user-outline">
+          </div>
+        </nav>
+      </div>
+      <div class="tb-grid-md-10 tb-grid-sm-8">
+        <div class="content">
+          <div class="content-header flex-center-vh flex-between">
+            <div>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb has-back-arrow">
+                  <li class="breadcrumb-item"><a href="#"><img src="assets/icons/circle-left-arrow.png"
+                        alt="circle-left-arrow"></a></li>
+                  <li class="breadcrumb-item"><a href="#">Settings</a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="content-body">
+            <div class="detail-row tb-grid-md-12">
+              <div class="detail-head tb-grid tb-grid-gap-17">
+                <div class="inner-item tb-grid-sm-6 tb-grid-xs-8" style="font-weight: bold;"><span>Change Email</span>
+                </div>
+                <div class="inner-item tb-grid-sm-6 tb-grid-xs-4" style="text-align: right;">
+                </div>
+              </div>
+            </div>
+            <form action="" class="tb-grid tb-grid-md-12 tb-grid-gap-50 details-body has-inputs">
+              <div class="tb-grid-lg-3">
+                <div class="input-group no-mb">
+                  <input type="email" class="form-control" placeholder="Enter new email" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                  <span class="placeholder">Enter new email</span>
+                </div>
+              </div>
+              <div class="tb-grid-lg-3">
+                <div class="input-group no-mb">
+                  <input type="email" class="form-control" placeholder="Repeat Enter new email" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                  <span class="placeholder">Repeat Enter new email</span>
+                </div>
+              </div>
+              <div class="tb-grid-lg-2 flex-center-vh flex-end-v-center-h">
+                <button class="btn btn-outline-dark">Update Email</button>
+              </div>
+            </form>
+            <div class="detail-row tb-grid-md-12">
+              <div class="detail-head tb-grid tb-grid-gap-17">
+                <div class="inner-item tb-grid-sm-6 tb-grid-xs-8" style="font-weight: bold;"><span>Change
+                    Password</span>
+                </div>
+                <div class="inner-item tb-grid-sm-6 tb-grid-xs-4" style="text-align: right;">
+                </div>
+              </div>
+            </div>
+            <form action="" class="tb-grid tb-grid-md-12 tb-grid-gap-50 details-body has-inputs">
+              <div class="tb-grid-lg-3">
+                <div class="input-group">
+                  <input type="password" class="form-control is-valid-black" value="• • • • • • •" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                  <span class="placeholder">ID</span>
+                  <span class="input-icon right">
+                    <img src="assets/icons/eye.png" alt="eye">
+                  </span>
+                </div>
+                <ul class="list-unstyled dotted">
+                  <li class="flex-center-v-start-h flex-center-vh success"><span class="dot">•</span> At least 10
+                    characters long</li>
+                  <li class="flex-center-v-start-h flex-center-vh success"><span class="dot">•</span> Different than
+                    last 3 passwords used</li>
+                  <li class="flex-center-v-start-h flex-center-vh success"><span class="dot">•</span> Contain letters
+                    and numbers</li>
+                </ul>
+              </div>
+              <div class="tb-grid-lg-3">
+                <div class="input-group">
+                  <input type="password" class="form-control is-valid-black" value="• • • • • • •" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                  <span class="placeholder">ID</span>
+                  <span class="input-icon right">
+                    <img src="assets/icons/eye.png" alt="eye">
+                  </span>
+                </div>
+                <ul class="list-unstyled dotted">
+                  <li class="flex-center-v-start-h flex-center-vh success"><span class="dot">•</span> Contain special
+                    characters or punctuation</li>
+                  <li class="flex-center-v-start-h flex-center-vh"><span class="dot">•</span> Passwords match</li>
+                </ul>
+              </div>
+              <div class="tb-grid-lg-2">
+                <button class="btn btn-outline-dark">Update Password</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
