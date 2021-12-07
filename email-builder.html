@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email-builder</title>
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <!-- STYLE CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- BODY -->
+
+<body class="email-builder">
+
+  <!-- MAIN -->
+  <main>
+    <div class="content no-pr fh">
+      <div class="content-header bg-white flex-center-vh flex-between no-pt no-pb">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb has-back-arrow">
+            <li class="breadcrumb-item"><a href="#"><img src="assets/icons/circle-left-arrow.png"
+                  alt="circle-left-arrow"></a></li>
+            <li class="breadcrumb-item"><a href="#">Analytics</a></li>
+          </ol>
+        </nav>
+        <div>
+          <a class="btn btn-dark" href="#">Save Email <img class="ml10" src="assets/icons/arrow-right-white.png"
+              alt="arrow-right-white"></a>
+        </div>
+      </div>
+      <div class="tb-grid tb-grid-gap-40 content-body">
+        <div class="tb-grid-md-6">
+          <div class="bg-white email-builder-left-col fh">
+            <div class="col-header bg-light-gray">
+              <h2 class="fs17 fw700 text-balck">Customize</h2>
+            </div>
+            <div class="col-body">
+              <div class="email-box">
+                <code class="fs14 fw400 text-black">
+                  Dear {{tenant.firstname}} {{tenant.lastname}},
+                  <br/>
+
+                  Thank you for your support over the past year. We were able to do amazing things in our organization because of donors like you!
+                  <br/>
+                  For the year {{year}}, your tax deductible donations amounted to: {{total}}.
+                  <br/>
+                  It is because of your help and generosity that we can continue to do the work we are doing. Your support makes a tremendous difference!
+                  <br/>
+                  Gratefully,
+                  <br/>
+                  The staff at Your Org Name
+                </code>
+              </div>
+              <div>
+                <div class="img-container no-p">
+                  <div class="dismiss">
+                    <img src="assets/icons/close-red.png" alt="">
+                  </div>
+                  <img class="logo-uploaded" src="assets/logo-black.png" alt="logo-black">
+                </div>
+                <div class="file-upload flex-center-vh flex-between">
+                  <div class="input-group form-control is-valid-dark width-auto no-mb">
+                    <input type="file" class="custom-file-input">
+                    <span class="placeholder placeholder2">Logo-header.jpg</span>
+                    <span class="placeholder">Logo Image</span>
+                  </div>
+                  <button class="btn btn-dark">Browse for
+                    file</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tb-grid-md-5 email-builder-right-col">
+          <div class="img-container no-p">
+            <img class="logo-uploaded" src="assets/logo-black.png" alt="logo-black">
+          </div>
+          <div class="email-box bg-white no-border">
+            <div class="text-right">
+              <code class="fw400 fs14 text-black60">{{date}} {{time}} </code>
+              <br />
+              <br />
+            </div>
+            <div class="fw400 fs14 text-black">
+              <p>Dear <code>{{tenant.firstname}} {{tenant.lastname}}</code>,</p>
+              <p>
+                Thank you for your support over the past year. We were able to do amazing things in our organization
+                because of donors like you!                
+              </p>
+              <p>
+                For the year <code>{{year}}</code> , your tax deductible donations amounted to: <code>{{total}}</code>.
+              </p>
+              <p>
+                It is because of your help and generosity that we can continue to do the work we are doing. Your support
+                makes a tremendous difference!                
+              </p>
+              <p>
+                Gratefully,
+              </p>
+              <p>
+                The staff at Your Org Name
+              </p>             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
