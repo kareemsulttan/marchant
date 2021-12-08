@@ -139,8 +139,12 @@ h6, .h6 {
 .flex-end-v-center-h {
   align-items: end;
 }
+.no-wrap {
+  flex-wrap: nowrap;
+}
 /*spaces*/
 .mr10 {margin-right: 10px!important;}
+.mr20 {margin-right: 20px!important;}
 .ml10 {margin-left: 10px!important;}
 
 .no-mb {margin-bottom: 0!important;}
@@ -1351,6 +1355,7 @@ a.a-dark:hover {text-decoration: underline;}
 /* ============================================ *
  * email-builder
  * ============================================ */
+
 .email-builder .content-header,.col-header {
   padding-right: 50px;
   padding-left: 50px;
@@ -1378,6 +1383,13 @@ a.a-dark:hover {text-decoration: underline;}
   margin-top: 30px;
 }
 
+.email-builder .modal {
+  max-width: 1062px
+}
+.email-builder .modal .col-header {
+  margin-bottom: 24px;
+}
+
 /* ============================================ *
  * responsive
  * ============================================ */
@@ -1387,8 +1399,26 @@ a.a-dark:hover {text-decoration: underline;}
      max-width: 600px;
    }
  }
- @media(max-width:1130px) {
+ @media(max-width:1100px) {
+  .email-builder .modal {
+    margin: 10px;
+  }
  }
+ @media(max-width:570px) {
+  .email-builder .modal .modal-header {
+    justify-content: center;
+  }
+  .email-builder .modal .modal-header h1 {
+    margin-bottom: 20px;
+  }
+ }
+ @media(max-width:530px) {
+  .modal-container {padding: 12px;}
+  .email-builder .file-upload .input-group {
+    margin-bottom: 10px!important;
+  }
+ } 
+
  @media(max-width:480px) {
   h1, .h1 {font-size: 1.75rem;}
   .sm-text {display: block;}
@@ -1399,13 +1429,35 @@ a.a-dark:hover {text-decoration: underline;}
   .login-page .login-container {padding: 35px 32px;}
   .login-page .input-group .bottom-right {right: 0;}
   .login-page .login-details .btn {margin-bottom: 30px;}
+  .email-builder .content-header, .col-header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .email-builder .breadcrumb-item a {
+    font-size: 1rem;
+  }
+  .email-builder .breadcrumb-item a img {
+    width: 70%;
+  }
+  .email-builder .breadcrumb.has-back-arrow li.breadcrumb-item:nth-child(2) {
+    padding-left: 0;
+  }
+  .email-builder .content-header .btn {
+    padding: 8px;
+  }
+  .email-builder .modal {
+    padding: 20px;
+  }
+  .email-builder .modal .modal-body .file-upload {
+    flex-wrap: wrap;
+  }
  }
  @media(max-width:370px) {
   .login-page main,.login-page .login-container {
     padding-right: 15px;
     padding-left: 15px;
   }
+  .email-builder .modal .modal-header .btn {
+    font-size: 10px;
+  }
  }
- @media(max-width:530px) {
-  .modal-container {padding: 12px;}
- } 

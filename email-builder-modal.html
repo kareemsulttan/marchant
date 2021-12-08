@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Email-builder</title>
+  <title>Email-modal</title>
   <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,59 @@
 <!-- BODY -->
 
 <body class="email-builder">
+
+  <div id="modal" class="modal-container flex-center-vh">
+
+    <!-- Modal content -->
+    <div class="modal">
+      <div class="dismiss flex-center-vh">
+        <img src="assets/icons/dismiss.png" alt="">
+      </div>
+      <div class="modal-header flex-center-vh flex-between">
+        <h1 class="fw400 fs30 text-black">Customize Email</h1>
+        <div>
+          <button class="btn btn-outline-dark">Send test</button>
+          <button class="btn btn-dark">Save Changes</button>
+        </div>
+      </div>
+      <div class="modal-body tb-grid tb-grid-gap-40">
+        <div class="tb-grid-md-6">
+          <div class="col-header bg-light-gray">
+            <h1 class="fs17 fw700 text-balck">Customize Text</h1>
+          </div>
+          <div class="email-box fs14 fw400 text-black">           
+              <p>Dear <code>{{tenant.firstname}} {{tenant.lastname}}</code>,</p>             
+              <p>Thank you for your support over the past year. We were able to do amazing things in our organization because of donors like you!</p>             
+              <p>
+                For the year <code>{{year}}</code>, your tax deductible donations amounted to: <code>{{total}}</code>.
+              </p>              
+              <p>It is because of your help and generosity that we can continue to do the work we are doing. Your support makes a tremendous difference!</p>              
+              <p>Gratefully,</p>
+              <p>The staff at Your Org Name</p>              
+          </div>
+        </div>
+        <div class="tb-grid-md-6">
+          <div class="col-header bg-light-gray">
+            <h1 class="fs17 fw700 text-balck">Customize Header</h1>
+          </div>
+          <div class="img-container no-p">
+            <div class="dismiss">
+              <img src="assets/icons/close-red.png" alt="">
+            </div>
+            <img class="logo-uploaded" src="assets/logo-black.png" alt="logo-black">
+          </div>
+          <div class="file-upload flex-center-vh no-wrap flex-between">
+            <div class="input-group form-control is-valid-dark width-auto mr20 no-mb">
+              <input type="file" class="custom-file-input">
+              <span class="placeholder placeholder2">Logo-header.jpg</span>
+              <span class="placeholder">Logo Image</span>
+            </div>
+            <button class="btn btn-dark">Browse for file</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- MAIN -->
   <main>
@@ -43,17 +96,21 @@
               <h2 class="fs17 fw700 text-balck">Customize</h2>
             </div>
             <div class="col-body">
-              <div class="email-box fs14 fw400 text-black">
-                <p>Dear <code>{{tenant.firstname}} {{tenant.lastname}}</code>,</p>
-                <p>Thank you for your support over the past year. We were able to do amazing things in our organization
-                  because of donors like you!</p>
-                <p>
-                  For the year <code>{{year}}</code>, your tax deductible donations amounted to: <code>{{total}}</code>.
-                </p>
-                <p>It is because of your help and generosity that we can continue to do the work we are doing. Your
-                  support makes a tremendous difference!</p>
-                <p>Gratefully,</p>
-                <p>The staff at Your Org Name</p>
+              <div class="email-box">
+                <code class="fs14 fw400 text-black">
+                  Dear {{tenant.firstname}} {{tenant.lastname}},
+                  <br/>
+
+                  Thank you for your support over the past year. We were able to do amazing things in our organization because of donors like you!
+                  <br/>
+                  For the year {{year}}, your tax deductible donations amounted to: {{total}}.
+                  <br/>
+                  It is because of your help and generosity that we can continue to do the work we are doing. Your support makes a tremendous difference!
+                  <br/>
+                  Gratefully,
+                  <br/>
+                  The staff at Your Org Name
+                </code>
               </div>
               <div>
                 <div class="img-container no-p">
@@ -68,7 +125,8 @@
                     <span class="placeholder placeholder2">Logo-header.jpg</span>
                     <span class="placeholder">Logo Image</span>
                   </div>
-                  <button class="btn btn-dark">Browse for file</button>
+                  <button class="btn btn-dark">Browse for
+                    file</button>
                 </div>
               </div>
             </div>
@@ -88,21 +146,21 @@
               <p>Dear <code>{{tenant.firstname}} {{tenant.lastname}}</code>,</p>
               <p>
                 Thank you for your support over the past year. We were able to do amazing things in our organization
-                because of donors like you!
+                because of donors like you!                
               </p>
               <p>
                 For the year <code>{{year}}</code> , your tax deductible donations amounted to: <code>{{total}}</code>.
               </p>
               <p>
                 It is because of your help and generosity that we can continue to do the work we are doing. Your support
-                makes a tremendous difference!
+                makes a tremendous difference!                
               </p>
               <p>
                 Gratefully,
               </p>
               <p>
                 The staff at Your Org Name
-              </p>
+              </p>             
             </div>
           </div>
         </div>
