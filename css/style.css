@@ -161,6 +161,7 @@ h6, .h6 {
 
 .width-auto {width: auto!important;}
 .no-border {border: none!important;}
+
 /*text*/
 .text-left {
   text-align: left !important;
@@ -219,7 +220,7 @@ a.text-warning:hover, a.text-warning:focus {
 .text-danger {
   color: var(--danger) !important;
 }
-.text-balck {
+.text-black {
   color: var(--black) !important;
 }
 .text-black60 {color: var(--black-60);}
@@ -1437,6 +1438,10 @@ a.a-dark:hover {text-decoration: underline;}
   width: auto;
   max-width: 150px;
 }
+.transactions table tbody tr {
+  background-color: var(--white);
+}
+
 
 /* ============================================ *
  * responsive
@@ -1451,20 +1456,42 @@ a.a-dark:hover {text-decoration: underline;}
   .mobile-dropdown {
     display: none;
   }
+  .d-lg-none {
+    display: none;
+  }
+ }
+ @media(max-width:1320px) {
+  .transactions-inputs {
+    justify-content: start;
+  }
+  .transactions-inputs .input-group {
+    margin-right: 10px;
+  }
  }
  @media(max-width:1100px) {
   .email-builder .modal {
     margin: 10px;
   }
  }
+
  @media(max-width:991px) {
-  .d-lg-none {
+  .d-sm-none {
     display: none!important;
   }
   .transactions {padding: 8px;}
   .transactions .content {padding-right: 0;}
-
+  .transactions table tbody tr td {
+    width: auto!important;
+    display: inline-block;
+    font-size: .625rem;
+    font-weight: 700;
+  }
+  .transactions table tbody tr td span.mobile-td {
+    font-weight: 400;
+    display: block;
+  }
  }
+
  @media(max-width:570px) {
   .email-builder .modal .modal-header {
     justify-content: center;
@@ -1473,6 +1500,7 @@ a.a-dark:hover {text-decoration: underline;}
     margin-bottom: 20px;
   }
  }
+
  @media(max-width:530px) {
   .modal-container {padding: 12px;}
   .email-builder .file-upload .input-group {

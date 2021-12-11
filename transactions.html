@@ -23,7 +23,7 @@
   <!-- MAIN -->
   <main>
     <div class="tb-grid tb-grid-gap-40 fh">
-      <div class="tb-grid-lg-2 tb-grid-sm-4 d-lg-none">
+      <div class="tb-grid-lg-2 tb-grid-sm-4 d-sm-none">
         <nav class="side-nav">
           <div class="nav-header brand flex-center-vh">
             <img src="assets/icons/nav-logo.png" alt="nav-logo">
@@ -85,27 +85,29 @@
                   <img src="assets/icons/search.png" alt="search">
                 </span>
               </div>
-              <button class="btn btn-secondary fs14 fw700 d-lg-none">
+              <button class="btn btn-secondary fs14 fw700 d-sm-none">
                 <img class="mr10" src="assets/icons/plus-dark.png" alt="plus-dark">
                 Add a Filter
               </button>
             </div>
             <div>
-              <button class="btn btn-outline-dark d-lg-none">Customize View</button>
+              <button class="btn btn-outline-dark d-sm-none">Customize View</button>
               <button class="btn btn-dark dropdown-btn">
                 <span class="mr10">Action</span>
                 <img src="assets/icons/down-white.png" alt="down-white">
                 <div class="dropdown-menu">
                   <ul class="list-unstyled no-m">
-                    <li>Impersonate</li>
-                    <li>Delete</li>
+                    <li>Download as CSV</li>
+                    <li>Transaction Report</li>
+                    <li>Recurring report</li>
+                    <li>Email All Cardholders</li>
                   </ul>
                 </div>
               </button>
             </div>
           </div>
           <div class="content-body">
-            <form class="flex-center-vh flex-between transactions-inputs">
+            <form class="flex-center-vh flex-between transactions-inputs d-sm-none">
               <div class="input-group">
                 <input type="number" class="form-control" placeholder="ID" aria-label="Username"
                   aria-describedby="basic-addon1">
@@ -144,10 +146,10 @@
             </form>
             <!-- transactions table -->
             <table>
-              <thead>
+              <thead class="d-sm-none">
                 <tr>
                   <th class="flex-center-vh flex-center-v-start-h ids" cellspacing="2px">
-                    <label class="customcheck">
+                    <label class="customcheck d-sm-none">
                       <input type="checkbox">
                       <span class="checkmark"></span>
                     </label>
@@ -167,139 +169,177 @@
               <tbody>
                 <tr>
                   <td class="flex-center-vh flex-center-v-start-h text-primary ids">
-                    <label class="customcheck">
+                    <label class="customcheck d-sm-none">
                       <input type="checkbox">
                       <span class="checkmark"></span>
                     </label>
                     124531361
+                    <span class="d-lg-none mobile-td text-black">aaronuitest</span>
                   </td>
-                  <td class="v2">124531361dashgahagdsga</td>
-                  <td class="user">aaronuitest</td>
-                  <td class="date">10/22/2020</td>
-                  <td class="time">13:45</td>
-                  <td class="amount">$1,345.01</td>
-                  <td class="type">Visa</td>
-                  <td class="customer">First Last</td>
-                  <td class="freq">One-time</td>
+                  <td class="v2 d-sm-none">124531361dashgahagdsga</td>
+                  <td class="user d-sm-none">
+                    aaronuitest
+                  </td>
+                  <td class="date">
+                    10/22/2020
+                    <span class="d-lg-none mobile-td">13:45</span>
+                  </td>
+                  <td class="time d-sm-none">13:45</td>
+                  <td class="amount">
+                    $1,345.01
+                    <span class="d-lg-none mobile-td">Visa</span>
+                  </td>
+                  <td class="type d-sm-none">Visa</td>
+                  <td class="customer">
+                    First Last
+                    <span class="d-lg-none mobile-td">One-time</span>
+                  </td>
+                  <td class="freq d-sm-none">One-time</td>
                 </tr>
                 <tr>
                   <td class="flex-center-vh flex-center-v-start-h text-primary ids">
-                    <label class="customcheck">
+                    <label class="customcheck d-sm-none">
                       <input type="checkbox">
                       <span class="checkmark"></span>
                     </label>
                     124531361
+                    <span class="d-lg-none mobile-td text-black">aaronuitest</span>
                   </td>
-                  <td class="v2">124531361dashgahagdsga</td>
-                  <td class="user">aaronuitest</td>
-                  <td class="date">10/22/2020</td>
-                  <td class="time">13:45</td>
-                  <td class="amount">$1,345.01</td>
-                  <td class="type">Visa</td>
-                  <td class="customer">First Last</td>
-                  <td class="freq">One-time</td>
+                  <td class="v2 d-sm-none">124531361dashgahagdsga</td>
+                  <td class="user d-sm-none">
+                    aaronuitest
+                  </td>
+                  <td class="date">
+                    10/22/2020
+                    <span class="d-lg-none mobile-td">13:45</span>
+                  </td>
+                  <td class="time d-sm-none">13:45</td>
+                  <td class="amount">
+                    $1,345.01
+                    <span class="d-lg-none mobile-td">Visa</span>
+                  </td>
+                  <td class="type d-sm-none">Visa</td>
+                  <td class="customer">
+                    First Last
+                    <span class="d-lg-none mobile-td">One-time</span>
+                  </td>
+                  <td class="freq d-sm-none">One-time</td>
                 </tr>
                 <tr>
                   <td class="flex-center-vh flex-center-v-start-h text-primary ids">
-                    <label class="customcheck">
+                    <label class="customcheck d-sm-none">
                       <input type="checkbox">
                       <span class="checkmark"></span>
                     </label>
                     124531361
+                    <span class="d-lg-none mobile-td text-black">aaronuitest</span>
                   </td>
-                  <td class="v2">124531361dashgahagdsga</td>
-                  <td class="user">aaronuitest</td>
-                  <td class="date">10/22/2020</td>
-                  <td class="time">13:45</td>
-                  <td class="amount">$1,345.01</td>
-                  <td class="type">Visa</td>
-                  <td class="customer">First Last</td>
-                  <td class="freq">One-time</td>
+                  <td class="v2 d-sm-none">124531361dashgahagdsga</td>
+                  <td class="user d-sm-none">
+                    aaronuitest
+                  </td>
+                  <td class="date">
+                    10/22/2020
+                    <span class="d-lg-none mobile-td">13:45</span>
+                  </td>
+                  <td class="time d-sm-none">13:45</td>
+                  <td class="amount">
+                    $1,345.01
+                    <span class="d-lg-none mobile-td">Visa</span>
+                  </td>
+                  <td class="type d-sm-none">Visa</td>
+                  <td class="customer">
+                    First Last
+                    <span class="d-lg-none mobile-td">One-time</span>
+                  </td>
+                  <td class="freq d-sm-none">One-time</td>
                 </tr>
                 <tr>
                   <td class="flex-center-vh flex-center-v-start-h text-primary ids">
-                    <label class="customcheck">
+                    <label class="customcheck d-sm-none">
                       <input type="checkbox">
                       <span class="checkmark"></span>
                     </label>
                     124531361
+                    <span class="d-lg-none mobile-td text-black">aaronuitest</span>
                   </td>
-                  <td class="v2">124531361dashgahagdsga</td>
-                  <td class="user">aaronuitest</td>
-                  <td class="date">10/22/2020</td>
-                  <td class="time">13:45</td>
-                  <td class="amount">$1,345.01</td>
-                  <td class="type">Visa</td>
-                  <td class="customer">First Last</td>
-                  <td class="freq">One-time</td>
+                  <td class="v2 d-sm-none">124531361dashgahagdsga</td>
+                  <td class="user d-sm-none">
+                    aaronuitest
+                  </td>
+                  <td class="date">
+                    10/22/2020
+                    <span class="d-lg-none mobile-td">13:45</span>
+                  </td>
+                  <td class="time d-sm-none">13:45</td>
+                  <td class="amount">
+                    $1,345.01
+                    <span class="d-lg-none mobile-td">Visa</span>
+                  </td>
+                  <td class="type d-sm-none">Visa</td>
+                  <td class="customer">
+                    First Last
+                    <span class="d-lg-none mobile-td">One-time</span>
+                  </td>
+                  <td class="freq d-sm-none">One-time</td>
                 </tr>
                 <tr>
                   <td class="flex-center-vh flex-center-v-start-h text-primary ids">
-                    <label class="customcheck">
+                    <label class="customcheck d-sm-none">
                       <input type="checkbox">
                       <span class="checkmark"></span>
                     </label>
                     124531361
+                    <span class="d-lg-none mobile-td text-black">aaronuitest</span>
                   </td>
-                  <td class="v2">124531361dashgahagdsga</td>
-                  <td class="user">aaronuitest</td>
-                  <td class="date">10/22/2020</td>
-                  <td class="time">13:45</td>
-                  <td class="amount">$1,345.01</td>
-                  <td class="type">Visa</td>
-                  <td class="customer">First Last</td>
-                  <td class="freq">One-time</td>
+                  <td class="v2 d-sm-none">124531361dashgahagdsga</td>
+                  <td class="user d-sm-none">
+                    aaronuitest
+                  </td>
+                  <td class="date">
+                    10/22/2020
+                    <span class="d-lg-none mobile-td">13:45</span>
+                  </td>
+                  <td class="time d-sm-none">13:45</td>
+                  <td class="amount">
+                    $1,345.01
+                    <span class="d-lg-none mobile-td">Visa</span>
+                  </td>
+                  <td class="type d-sm-none">Visa</td>
+                  <td class="customer">
+                    First Last
+                    <span class="d-lg-none mobile-td">One-time</span>
+                  </td>
+                  <td class="freq d-sm-none">One-time</td>
                 </tr>
                 <tr>
                   <td class="flex-center-vh flex-center-v-start-h text-primary ids">
-                    <label class="customcheck">
+                    <label class="customcheck d-sm-none">
                       <input type="checkbox">
                       <span class="checkmark"></span>
                     </label>
                     124531361
+                    <span class="d-lg-none mobile-td text-black">aaronuitest</span>
                   </td>
-                  <td class="v2">124531361dashgahagdsga</td>
-                  <td class="user">aaronuitest</td>
-                  <td class="date">10/22/2020</td>
-                  <td class="time">13:45</td>
-                  <td class="amount">$1,345.01</td>
-                  <td class="type">Visa</td>
-                  <td class="customer">First Last</td>
-                  <td class="freq">One-time</td>
-                </tr>
-                <tr>
-                  <td class="flex-center-vh flex-center-v-start-h text-primary ids">
-                    <label class="customcheck">
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    124531361
+                  <td class="v2 d-sm-none">124531361dashgahagdsga</td>
+                  <td class="user d-sm-none">
+                    aaronuitest
                   </td>
-                  <td class="v2">124531361dashgahagdsga</td>
-                  <td class="user">aaronuitest</td>
-                  <td class="date">10/22/2020</td>
-                  <td class="time">13:45</td>
-                  <td class="amount">$1,345.01</td>
-                  <td class="type">Visa</td>
-                  <td class="customer">First Last</td>
-                  <td class="freq">One-time</td>
-                </tr>
-                <tr>
-                  <td class="flex-center-vh flex-center-v-start-h text-primary ids">
-                    <label class="customcheck">
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    124531361
+                  <td class="date">
+                    10/22/2020
+                    <span class="d-lg-none mobile-td">13:45</span>
                   </td>
-                  <td class="v2">124531361dashgahagdsga</td>
-                  <td class="user">aaronuitest</td>
-                  <td class="date">10/22/2020</td>
-                  <td class="time">13:45</td>
-                  <td class="amount">$1,345.01</td>
-                  <td class="type">Visa</td>
-                  <td class="customer">First Last</td>
-                  <td class="freq">One-time</td>
+                  <td class="time d-sm-none">13:45</td>
+                  <td class="amount">
+                    $1,345.01
+                    <span class="d-lg-none mobile-td">Visa</span>
+                  </td>
+                  <td class="type d-sm-none">Visa</td>
+                  <td class="customer">
+                    First Last
+                    <span class="d-lg-none mobile-td">One-time</span>
+                  </td>
+                  <td class="freq d-sm-none">One-time</td>
                 </tr>
               </tbody>
             </table>
