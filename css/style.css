@@ -1479,6 +1479,7 @@ a.a-dark:hover {text-decoration: underline;}
     display: none!important;
   }
   .transactions {padding: 8px;}
+  .transactions .content-header {padding-top: 0;}
   .transactions .content {padding-right: 0;}
   .transactions table tbody tr td {
     width: auto!important;
