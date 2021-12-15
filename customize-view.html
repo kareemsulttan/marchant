@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transactions bulk</title>
+  <title>Transactions</title>
   <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,251 @@
 <!-- BODY -->
 
 <body class="transactions">
+  <div id="modal" class="modal-container flex-center-vh">
 
+    <!-- Modal content -->
+    <div class="modal modal-lg customize-view-modal">
+      <div class="dismiss flex-center-vh">
+        <img src="assets/icons/dismiss.png" alt="">
+      </div>
+      <div class="modal-header flex-center-vh flex-between">
+        <h1 class="fw400 fs30 text-black">Customize View</h1>
+        <div>
+          <button class="btn btn-outline-dark">Save this view</button>
+          <button class="btn btn-dark dropdown-btn">
+            <span class="mr10">Saved Views</span>
+            <img src="assets/icons/down-white.png" alt="down-white">
+            <div class="dropdown-menu">
+              <ul class="list-unstyled no-m">
+                <li>Download as CSV</li>
+                <li>Transaction Report</li>
+                <li>Recurring report</li>
+                <li>Email All Cardholders</li>
+              </ul>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body tb-grid tb-grid-gap-40">
+        <div>
+          <button class="btn btn-secondary mr20">Select All</button>
+          <button class="btn btn-secondary">Deselect All</button>
+        </div>
+        <div class="tb-grid-md-3 tb-grid-sm-6">
+          <ul class="list-unstyled customize-items">
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+          </ul>
+        </div>
+        <div class="tb-grid-md-3 tb-grid-sm-6">
+          <ul class="list-unstyled customize-items">
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+          </ul>
+        </div>
+        <div class="tb-grid-md-3 tb-grid-sm-6">
+          <ul class="list-unstyled customize-items">
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+          </ul>
+        </div>
+        <div class="tb-grid-md-3 tb-grid-sm-6">
+          <ul class="list-unstyled customize-items">
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+            <li class="flex-center-vh flex-center-v-start-h">
+              <label class="customcheck">
+                <input type="checkbox">
+                <span class="checkmark check-outline"></span>
+              </label>
+              <span>Column Item</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- MAIN -->
   <main>
     <div class="tb-grid tb-grid-gap-40 fh">
@@ -346,21 +590,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="bottom-nav tb-grid tb-grid-gap-40 bg-white">
-        <div class="tb-grid-lg-2 tb-grid-sm-4"></div>
-        <div class="tb-grid-lg-10 bottom-nav-menu">
-          <div class="flex-center-vh flex-between">
-            <div class="left-menu fw400 fs18 text-black">
-              <span class="mr20">Transactions Selected: 4</span>
-              <span>Total: $457.14</span>
-            </div>
-            <div class="right-menu">
-              <button class="btn btn-outline-dark mr20">Retry</button>
-              <button class="btn btn-outline-dark">Duplicate</button>
-            </div>
-          </div>          
-        </div>
     </div>
   </main>
 

@@ -1036,7 +1036,7 @@ input:checked + .slider:before {
   line-height: 0;
 }
 .dotted li.success {
-  color: #171717;
+  color: var(--dark);
 }
 .dotted li.success span.dot {
   color: #00B07D!important;
@@ -1119,6 +1119,10 @@ input:checked + .slider:before {
   background-color: var(--white);
   padding: 40px;
   position: relative;
+}
+.modal-lg {
+  max-width: 1062px;
+  width:100%
 }
 .modal .modal-header h2 {
   font-size: 30px;
@@ -1269,14 +1273,14 @@ table tbody tr {
 table tbody tr td {
   font-size: 13px;
 }
-table .customcheck {
+table .customcheck,.transactions .customcheck {
   margin: 0;
   margin-right: 10px;
   height: 20px;
   width: 20px;
   padding: 0;
 }
-table .customcheck .checkmark {
+.checkmark.check-outline {
   background-color: var(--white);
   border: 2px solid #9F9F9F;
 }
@@ -1389,9 +1393,6 @@ a.a-dark:hover {text-decoration: underline;}
   margin-top: 30px;
 }
 
-.email-builder .modal {
-  max-width: 1062px
-}
 .email-builder .modal .col-header {
   margin-bottom: 24px;
 }
@@ -1456,16 +1457,70 @@ a.a-dark:hover {text-decoration: underline;}
 }
 .bottom-nav .bottom-nav-menu {
   padding: 30px 40px 30px 0;
-
 }
+.transactions table tbody tr td span.mobile-td {
+  color: var(--black);
+}
+
+/* ============================================ *
+ * transactions-dark
+ * ============================================ */
+
+ .transactions-dark{
+   background-color: #4A4A4A;
+ }
+ .transactions-dark .form-control {
+   background-color: var(--dark)!important;
+   border-color: var(--dark)!important;
+   border-bottom-color: var(--white)!important;
+   color: var(--white);
+ }
+ .transactions-dark .form-control:placeholder-shown ~ .placeholder{
+  color: rgba(255, 255, 255, 0.6);
+ }
+ .transactions-dark .placeholder, .transactions-dark .form-control:placeholder-shown:focus ~ .placeholder {
+  color: var(--white);
+  background-color: #171717;
+ }
+ .transactions-dark .btn-secondary {
+   background-color: #464E53;
+   border-color: #464E53;
+ }
+ .transactions-dark table .customcheck .checkmark {
+  background-color: #8E8E8E;
+  border: 2px solid #9F9F9F;
+ }
+ .transactions-dark .btn, .transactions-dark .form-group.has-search .form-control, .transactions-dark table thead tr,.transactions-dark table tbody tr,.transactions-dark table tbody tr td.amount,.transactions-dark .side-nav ul.nav-list li.active a,.transactions-dark .side-nav .nav-item.active h2 {
+   color: var(--white);
+ }
+ .transactions-dark .side-nav ul.nav-list li a, .transactions-dark .side-nav .nav-item {
+   color: rgba(255, 255, 255, 0.6);
+ }
+ .transactions-dark .side-nav .nav-header, .transactions-dark .side-nav .nav-item {
+   border-bottom-color: rgba(255, 255, 255, 0.2);
+ }
+ .transactions-dark table thead tr {
+   background-color: #464E53;
+ }
+ .transactions-dark table tbody tr, .transactions-dark .side-nav  {
+   background-color: var(--black);
+ }
+.transactions-dark table tbody tr td span.mobile-td {
+  color: var(--white);
+}
+.customize-items li {
+  margin-bottom: 40px;
+}
+.customize-items li span {
+  font-size: .875rem!important;
+}
+
 /* ============================================ *
  * responsive
  * ============================================ */
 
  @media(min-width:768px) {
-   .email-builder-left-col {
-     max-width: 600px;
-   }
+   .email-builder-left-col { max-width: 600px; }
  }
  @media(min-width:992px) {
   .mobile-dropdown {
@@ -1484,7 +1539,7 @@ a.a-dark:hover {text-decoration: underline;}
   }
  }
  @media(max-width:1100px) {
-  .email-builder .modal {
+  .modal-lg {
     margin: 10px;
   }
  }
@@ -1506,6 +1561,27 @@ a.a-dark:hover {text-decoration: underline;}
   .transactions table tbody tr td span.mobile-td {
     font-weight: 400;
     display: block;
+  }
+ }
+
+ @media(max-width:590px) {
+  .bottom-nav-menu {
+    padding: 15px!important;
+  }
+  .bottom-nav-menu .right-menu,
+  .bottom-nav-menu .left-menu {
+    width: 100%;
+    text-align: center;
+    font-size: .85rem!important;
+    padding-bottom: 10px;
+  }
+  .customize-view-modal .modal-header,.customize-view-modal .modal-body div {
+    justify-content: center;
+    text-align: center;
+  }
+  .customize-view-modal .modal-header h1,.customize-view-modal .modal-header div .btn,.customize-view-modal .modal-body div .btn {
+    margin-bottom: 20px;
+    margin-right: 0!important;
   }
  }
 
