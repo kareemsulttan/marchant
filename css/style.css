@@ -1029,6 +1029,7 @@ input:checked + .slider:before {
   font-size: .75rem!important;
   color: var(----black-60);
   margin-bottom: 8px;
+  flex-wrap: inherit;
 }
 .dotted li span.dot {
   font-size: 1.8rem;
@@ -1555,22 +1556,32 @@ a.a-dark:hover {text-decoration: underline;}
   .d-sm-none {
     display: none!important;
   }
-  .transactions {padding: 8px;}
+  .transactions,.users {padding: 8px;}
   .transactions .content-header {padding-top: 0;}
-  .transactions .content {padding-right: 0;}
-  .transactions table tbody tr {padding: 5px 10px;}
-  .transactions table tbody tr td {
+  .transactions .content,.users .content  {padding-right: 0;}
+  .mobile-table tbody tr {padding: 5px 10px;}
+  .mobile-table tbody tr td {
     width: auto!important;
     display: inline-block;
     font-size: .625rem;
     font-weight: 700;
   }
-  .transactions table tbody tr td span.mobile-td {
+  .mobile-table tbody tr td span.mobile-td {
     font-weight: 400;
     display: block;
   }
  }
 @media(max-width:767px) {
+  .breadcrumb-item a {
+    font-size: 12px;
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding: 0;
+    margin: -4px 10px;
+    width: 16px;
+    height: 12px;
+  }
   .transactions-details .detail-head .inner-item {
     text-align: left!important;
   }
@@ -1606,6 +1617,9 @@ a.a-dark:hover {text-decoration: underline;}
   }
   .email-builder .modal .modal-header h1 {
     margin-bottom: 20px;
+  }
+  .customize-items li {
+    justify-content: center!important;
   }
  }
 
