@@ -1585,6 +1585,13 @@ a.a-dark:hover {text-decoration: underline;}
   .transactions-details .detail-head .inner-item {
     text-align: left!important;
   }
+  .users-table tbody { text-align: center; }
+  .users-table tbody tr {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 10px;
+  }
 }
  @media(max-width:590px) {
   .bottom-nav-menu {
@@ -1620,6 +1627,12 @@ a.a-dark:hover {text-decoration: underline;}
   }
   .customize-items li {
     justify-content: center!important;
+  }
+  .users-header {
+    justify-content: center;
+  }
+  .users-search {
+    margin-bottom: 15px!important;
   }
  }
 
