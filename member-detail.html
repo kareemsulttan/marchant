@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member detail</title>
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <!-- STYLE CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- BODY -->
+
+<body class="users user-settings member-details">
+
+  <!-- MAIN -->
+  <main>
+    <div class="tb-grid tb-grid-gap-40 fh">
+      <div class="tb-grid-lg-2 tb-grid-sm-4 d-sm-none">
+        <nav class="side-nav">
+          <div class="nav-header brand flex-center-vh">
+            <img src="assets/icons/nav-logo.png" alt="nav-logo">
+          </div>
+          <div class="nav-body">
+            <div class="nav-item">
+              <h2>Organization</h2>
+            </div>
+            <div class="nav-item active">
+              <h2>Reporting</h2>
+              <div class="nav-list-container">
+                <ul class="list-unstyled nav-list">
+                  <li class="active"><a href="#">Transactions</a></li>
+                  <li><a href="#">Batches</a></li>
+                  <li><a href="#">Deposits</a></li>
+                  <li><a href="#">Scheduled</a></li>
+                  <li><a href="#">Analytics</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav-item">
+              <h2>Profiles</h2>
+              <div class="nav-list-container">
+                <ul class="list-unstyled nav-list">
+                  <li><a href="#">Users</a></li>
+                  <li><a href="#">Members</a></li>
+                  <li><a href="#">Roles</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="nav-footer flex-center-vh">
+            <img src="assets/icons/user-outline.png" alt="user-outline">
+          </div>
+        </nav>
+      </div>
+      <div class="tb-grid-lg-10">
+        <div class="content">
+          <div class="content-header flex-center-vh flex-between">
+            <div>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb has-back-arrow">
+                  <li class="breadcrumb-item"><a href="#"><img src="assets/icons/circle-left-arrow.png"
+                        alt="circle-left-arrow"></a></li>
+                  <li class="breadcrumb-item"><a href="#">Members</a></li>
+                  <li class="breadcrumb-item"><a href="#">aaron@aarondodson.com</a></li>
+                </ol>
+              </nav>
+            </div>
+            <div>
+              <button class="btn btn-danger">Delete Member</button>
+            </div>
+          </div>
+          <div class="content-body">
+            <div class="detail-row tb-grid-md-12">
+              <div class="detail-head tb-grid tb-grid-gap-17">
+                <div class="inner-item tb-grid-sm-6 tb-grid-xs-8" style="font-weight: bold;"><span class="fs17">Member
+                    Details</span>
+                </div>
+                <div class="inner-item tb-grid-sm-6 tb-grid-xs-4" style="text-align: right;">
+                  <span class="fs17">Organization Name</span>
+                </div>
+              </div>
+            </div>
+            <form action="" class="tb-grid tb-grid-md-12 tb-grid-gap-30 details-body has-inputs">
+              <div class="tb-grid-lg-4 tb-grid-md-6">
+                <div class="input-group no-mb">
+                  <input type="text" class="form-control" placeholder="First Name" aria-label="FirstName"
+                    aria-describedby="basic-addon1">
+                  <span class="placeholder">First Name</span>
+                </div>
+              </div>
+              <div class="tb-grid-lg-4 tb-grid-md-6">
+                <div class="input-group no-mb">
+                  <input type="phone" class="form-control" placeholder="Last Name" aria-label="LastName"
+                    aria-describedby="basic-addon1">
+                  <span class="placeholder">Last Name</span>
+                </div>
+              </div>
+              <div class="tb-grid-lg-4 tb-grid-md-6">
+                <div class="input-group no-mb">
+                  <input type="tel" class="form-control" placeholder="Phone" aria-label="Phone"
+                    aria-describedby="basic-addon1" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                  <span class="placeholder">Phone</span>
+                </div>
+              </div>
+              <!-- second row -->
+              <div class="tb-grid-lg-4 tb-grid-md-6">
+                <div class="input-group no-mb">
+                  <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                    aria-describedby="basic-addon1" required>
+                  <span class="placeholder">Email</span>
+                </div>
+              </div>
+              <div class="tb-grid-xl-3 tb-grid-lg-4 tb-grid-md-6">
+                <div class="input-group no-mb">
+                  <input type="date" class="form-control" placeholder="Birthday" aria-label="Birthday"
+                    aria-describedby="basic-addon1" required>
+                  <span class="placeholder">Birthday</span>
+                </div>
+              </div>
+              <div class="tb-grid-xl-2 tb-grid-lg-2 tb-grid-md-6">
+                <div class="input-group no-mb">
+                  <input type="number" class="form-control" placeholder="Age" aria-label="Age"
+                    aria-describedby="basic-addon1" required>
+                  <span class="placeholder">Age</span>
+                </div>
+              </div>
+              <div class="tb-grid-xl-3 tb-grid-lg-2 tb-grid-md-6">
+                <div class="input-group no-mb">
+                  <select class="custom-select form-control" id="inputGroupSelect01">
+                    <option selected="">Mail</option>
+                    <option value="1">Femail</option>
+                  </select>
+                  <span class="placeholder">Gender</span>
+                </div>
+              </div>
+              <div class="tb-grid-lg-4 tb-grid-md-6">
+                <div class="input-group no-mb">
+                  <input type="text" class="form-control has-placeholder" placeholder="Type a tag and press enter"
+                    aria-label="Email" aria-describedby="basic-addon1" required>
+                  <span class="placeholder">Custom Detail</span>
+                </div>
+              </div>
+              <div class="tb-grid-lg-8 tb-grid-md-6">
+                <div class="flex-center-vh flex-center-v-start-h fh">
+                  <div class="btn tag-btn btn-icon mr10">
+                    Tag1
+                    <img src="assets/icons/close-gray.png" alt="close-gray">
+                  </div>
+                  <div class="btn tag-btn btn-icon mr10">
+                    Tag2
+                    <img src="assets/icons/close-gray.png" alt="close-gray">
+                  </div>
+                  <div class="btn tag-btn btn-icon mr10">
+                    Tag3
+                    <img src="assets/icons/close-gray.png" alt="close-gray">
+                  </div>
+                  <div class="btn tag-btn btn-icon mr10">
+                    Tag4
+                    <img src="assets/icons/close-gray.png" alt="close-gray">
+                  </div>
+                </div>
+              </div>
+              <div class="tb-grid-lg-12">
+                <div class="input-group no-mb">
+                  <textarea name="notes" id="notes" class="form-control has-placeholder"
+                    placeholder="Add your notes here..." cols="30" rows="10"></textarea>
+                  <span class="placeholder">Notes</span>
+                </div>
+              </div>
+            </form>
+            <div class="detail-row tb-grid-md-12 bg-transparent mb20">
+              <div class="detail-head tb-grid tb-grid-gap-17">
+                <div class="inner-item tb-grid-sm-6 tb-grid-xs-8 flex-center-v-start-h flex-center-vh"><span
+                    class="fs22">Member Addresses</span>
+                </div>
+                <div class="inner-item tb-grid-sm-6 tb-grid-xs-4" style="text-align: right;">
+                  <button class="btn btn-outline-dark">Add Address</button>
+                </div>
+              </div>
+            </div>
+            <table class="mobile-table member-details-table mb20">
+              <thead>
+                <tr>
+                  <th class="v2"> Address <img src="assets/icons/top-bottom-arrows.png" alt="top-bottom-arrows">
+                  </th>
+                  <th class="ids">Unit <img src="assets/icons/top-bottom-arrows.png" alt="top-bottom-arrows"></th>
+                  <th class="user">City <img src="assets/icons/top-bottom-arrows.png" alt="top-bottom-arrows"></th>
+                  <th class="date">State <img src="assets/icons/top-bottom-arrows.png" alt="top-bottom-arrows"></th>
+                  <th class="time">Zip <img src="assets/icons/top-bottom-arrows.png" alt="top-bottom-arrows"></th>
+                  <th class="amount">Country <img src="assets/icons/top-bottom-arrows.png" alt="top-bottom-arrows"></th>
+                  <th class="type">Type <img src="assets/icons/top-bottom-arrows.png" alt="top-bottom-arrows"></th>
+                  <th class="customer"> </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="v2"> 12312 E Prosperity Ave. </td>
+                  <td class="ids">Ste. 3516</td>
+                  <td class="user">CityName</td>
+                  <td class="date">OR</td>
+                  <td class="time">98415</td>
+                  <td class="amount">United States</td>
+                  <td class="type">Manual</td>
+                  <td class="customer"><button class="btn btn-danger btn-sm">Delete</button></td>
+                </tr>
+                <tr>
+                  <td class="v2"> 12312 E Prosperity Ave. </td>
+                  <td class="ids">Ste. 3516</td>
+                  <td class="user">CityName</td>
+                  <td class="date">OR</td>
+                  <td class="time">98415</td>
+                  <td class="amount">United States</td>
+                  <td class="type">Manual</td>
+                  <td class="customer"><button class="btn btn-danger btn-sm">Delete</button></td>
+                </tr>
+                <tr>
+                  <td class="v2"> 12312 E Prosperity Ave. </td>
+                  <td class="ids">Ste. 3516</td>
+                  <td class="user">CityName</td>
+                  <td class="date">OR</td>
+                  <td class="time">98415</td>
+                  <td class="amount">United States</td>
+                  <td class="type">Manual</td>
+                  <td class="customer"><button class="btn btn-danger btn-sm">Delete</button></td>
+                </tr>
+                <tr>
+                  <td class="v2"> 12312 E Prosperity Ave. </td>
+                  <td class="ids">Ste. 3516</td>
+                  <td class="user">CityName</td>
+                  <td class="date">OR</td>
+                  <td class="time">98415</td>
+                  <td class="amount">United States</td>
+                  <td class="type">Manual</td>
+                  <td class="customer"><button class="btn btn-danger btn-sm">Delete</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
