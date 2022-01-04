@@ -16,6 +16,7 @@ $(".nav-item").click(function () {
     $(this).addClass("active");
   }
 });
+
 /*modal*/
 // Get the modal
 var modal = document.getElementById("modal");
