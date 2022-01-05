@@ -927,8 +927,10 @@ select.form-control:focus::-ms-value {
 }
 
 /* When the checkbox is checked, add a blue background */
-.customcheck.dark input:checked ~ .checkmark {
+.customcheck.dark input:checked ~ .checkmark,
+.customcheck.light-gray input:checked ~ .checkmark  {
   background-color: var(--dark);
+  border-color: var(--dark);
 }
 .customcheck.gray input:checked ~ .checkmark {
   background-color: #6F818B;
@@ -967,14 +969,13 @@ select.form-control:focus::-ms-value {
 }
 
 /* Show the checkmark when checked */
-.customcheck input:checked ~ .checkmark:after {
+.customcheck input:checked ~ .checkmark:after,
+.customcheck.light-gray input:checked ~ .checkmark:after {
   display: block;
-  background-image: url(../assets/icons/checked-white.png);
+  background-image: url(../assets/icons/checked-white.png)!important;
 }
 
 .input-group,.form-group.has-search {margin-bottom: 2rem;}
-
-
 
 .switch {
   position: relative;
