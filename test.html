@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <!-- STYLE CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- BODY -->
+
+<body class="analytics">
+
+  <!-- MAIN -->
+  <main>
+    <div class="tb-grid tb-grid-gap-40 fh">
+      <div class="tb-grid-md-2 tb-grid-sm-4 d-sm-none">
+        <nav class="side-nav">
+          <div class="nav-header brand flex-center-vh">
+            <img src="assets/icons/nav-logo.png" alt="nav-logo">
+          </div>
+          <div class="nav-body">
+            <div class="nav-item">
+              <h2>Organization</h2>
+            </div>
+            <div class="nav-item active">
+              <h2>Reporting</h2>
+              <div class="nav-list-container">
+                <ul class="list-unstyled nav-list">
+                  <li><a href="#">Transactions</a></li>
+                  <li><a href="#">Batches</a></li>
+                  <li><a href="#">Deposits</a></li>
+                  <li><a href="#">Scheduled</a></li>
+                  <li class="active"><a href="#">Analytics</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="nav-item">
+              <h2>Profiles</h2>
+              <div class="nav-list-container">
+                <ul class="list-unstyled nav-list">
+                  <li><a href="#">Users</a></li>
+                  <li><a href="#">Members</a></li>
+                  <li><a href="#">Roles</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="nav-footer flex-center-vh">
+            <img src="assets/icons/user-outline.png" alt="user-outline">
+          </div>
+        </nav>
+      </div>
+      <div class="tb-grid-lg-10">
+        <div class="content">
+          <div class="content-header users-header flex-center-vh flex-between">
+            <div class="filter-container flex-center-vh flex-center-v-start-h">
+              <div class="input-group mr10 mb10 w-auto">
+                <input type="date" class="form-control has-border calender has-arrow" value="2021-10-20"
+                  aria-label="start-day" aria-describedby="basic-addon1" required>
+                <span class="fixed-input-text">Start Date:</span>
+              </div>
+              <div class="input-group mr10 mb10 w-auto">
+                <input type="date" class="form-control has-border calender has-arrow" value="2021-10-20"
+                  aria-label="end-day" aria-describedby="basic-addon1" required>
+                <span class="fixed-input-text">End Date:</span>
+              </div>
+              <div class="input-group mr10 mb10 w-auto">
+                <select class="custom-select form-control has-border has-arrow">
+                  <option selected="">Gearbox</option>
+                  <option value="1">Gearbox</option>
+                </select>
+                <span class="fixed-input-text">Account:</span>
+              </div>
+              <button class="btn btn-primary mb10">Run Report</button>
+            </div>
+            <div>
+              <button class="btn btn-dark mb10">
+                <span class="mr10">Action</span>
+                <img src="assets/icons/down-white.png" alt="down-white">
+              </button>
+            </div>
+          </div>
+          <div class="content-body">
+            <div class="chart-container bg-white mb40">
+              <div class="chart-header mb20">
+                <h3 class="fw700 fs12 text-gray uppercase mb10">Giving Total</h3>
+                <h2 class="fs37 fw700">$415,366</h2>
+              </div>
+              <div class="chart-body">
+                <canvas id="total-chart" height="230px"></canvas>
+              </div>
+            </div>
+            <div>
+              <div class="owl-carousel">
+                <div class="bg-white chart-container">
+                  <h2 class="fw700 fs20 mb10 text-center">Transaction Type</h2>
+                  <canvas id="doughnut-chart1"></canvas>
+                  <div class="doughnut-legend"></div>
+                  <div class="chart-value-center flex-center-vh flex-column">
+                    <span class="text-dark fw700 fs33">3,502</span>
+                    <span class="text-gray fs13 fw500">Transactions</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="bg-white chart-container">
+                    <h2 class="fw700 fs20 mb10 text-center">Transaction Status</h2>
+                    <canvas id="doughnut-chart2"></canvas>
+                    <div class="doughnut-legend doughnut-legend2"></div>
+                    <div class="chart-value-center flex-center-vh flex-column">
+                      <span class="text-dark fw700 fs33">75%</span>
+                      <span class="text-gray fs13 fw500">Transactions</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white chart-container">
+                  <h2 class="fw700 fs20 mb10 text-center">Transaction Status</h2>
+                  <canvas id="doughnut-chart3"></canvas>
+                  <div class="doughnut-legend doughnut-legend2"></div>
+                  <div class="chart-value-center flex-center-vh flex-column">
+                    <span class="text-dark fw700 fs33">75%</span>
+                    <span class="text-gray fs13 fw500">Transactions</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/chart.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.owl-carousel').owlCarousel({
+        responsive: {
+          0: {
+            items: 1,
+            nav: true
+          },
+          600: {
+            items: 2,
+            nav: true
+          },
+          1000: {
+            items: 3,
+            nav: false,
+          }
+        }
+      });
+    });
+  </script>
+</body>
