@@ -1217,16 +1217,22 @@ input:checked + .slider:before {
   display: none;
 }
 .card .card-header,.card .card-body,.card .card-footer {
-  padding: 20px;
-  background-color: #eee;
+  padding: 17px;
+  background-color: #E6EAEC;
 }
 .card .card-header h3 {
     font-size: 17px;
   font-weight: 700;
   margin-bottom: 0;
 }
+.card .card-body {
+  padding-bottom: 10px;
+}
 .card .card-body,.card .card-footer {
   background: var(--white);
+}
+.card .card-footer {
+  padding-top: 0;
 }
 .card .card-body .user {
   font-size: 12px;
@@ -1241,6 +1247,8 @@ input:checked + .slider:before {
 }
 .card .card-footer a {
   text-decoration: none;
+  font-size: .75rem;
+  font-weight: 700;
 }
 .modal {
   background-color: var(--white);
