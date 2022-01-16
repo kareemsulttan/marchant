@@ -1760,6 +1760,28 @@ a.a-dark:hover {text-decoration: underline;}
 .donors-table .amount {
   width: 170px;
 }
+.permission-role-list li {
+  cursor: pointer;
+  margin-bottom: 35px;
+}
+.permission-role-list li .edit {
+  visibility: hidden;
+  text-decoration: none!important;
+  color: var(--primary)!important;
+}
+.permission-role-list li .edit img {
+  vertical-align: sub;
+}
+.permission-role-list li:hover .edit {
+  visibility: visible;
+}
+.edit-permission-modal {
+  width: 100%;
+  max-width: 540px;
+}
+.edit-permission-modal .modal-body .input-group {
+  margin-bottom: 30px;
+}
 
 /* ============================================ *
  * responsive

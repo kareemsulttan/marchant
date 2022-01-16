@@ -101,20 +101,6 @@ var chartInstance = new Chart(ctx, {
   type: 'line',
   data: data,
   options: options,
-  onResize: function (chartInstance, size) {
-
-    var showTicks = (size.width < 500) ? false : true;
-
-    chartInstance.options = {
-      scales: {
-        yAxes: [{
-          ticks: {
-            display: showTicks
-          }
-        }]
-      }
-    };
-  }
 });
 
 
