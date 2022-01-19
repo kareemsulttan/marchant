@@ -1742,7 +1742,7 @@ a.a-dark:hover {text-decoration: underline;}
 .donors {
   overflow-x: auto;
 }
-.donors-table {
+.donors-table,.member-details-table {
   min-width: 815px;
 }
 .donors-table thead tr, .donors-table tbody tr {
