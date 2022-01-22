@@ -1939,6 +1939,10 @@ a.a-dark:hover {text-decoration: underline;}
   .modal {
     padding: 20px;
   }
+  .filter-container .input-group, .filter-container .btn, .content-header div,.content-header div .btn {
+    margin-right: 0!important;
+    width: 100%!important;
+  }
  } 
 
  @media(max-width:480px) {
